@@ -1,5 +1,6 @@
 {
   "env": {
+    "browser": true,
     "es6": true
   },
   "extends": [
@@ -19,10 +20,14 @@
       "jsx": true
     },
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+    "no-unused-expressions": "off",
+    "@typescript-eslint/camelcase": "off",
+
     "prettier/prettier": "error",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
