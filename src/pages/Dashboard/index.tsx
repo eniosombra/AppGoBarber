@@ -10,6 +10,7 @@ import {
   Header,
   HeaderTitle,
   UserName,
+  SignOutButton,
   ProfileButton,
   UserAvatar,
   ProvidersList,
@@ -53,6 +54,10 @@ const Dashboard: React.FC = () => {
   return (
     <Container>
       <Header>
+        <SignOutButton onPress={() => signOut()}>
+          <Icon name="x-square" size={24} color="#ff9000" />
+        </SignOutButton>
+
         <HeaderTitle>
           Bem vindo, {'\n'}
           <UserName>{user.name}</UserName>
